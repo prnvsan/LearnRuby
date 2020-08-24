@@ -1,0 +1,117 @@
+
+
+def goblin
+  puts "You have chosen the easy way out"
+  puts "You have approached a fork in the path. You can hear loud thuds. Do you go left or right?"
+ print ">"
+  choice = $stdin.gets.chomp
+
+  if choice == "left"
+    puts "There is another fork in the path, you hear screams from the distance choose quick,  left or right?  "
+    print ">"
+    choice2 = $stdin.gets.chomp
+
+      if choice2 == "right"
+        puts " Congratulations you wimp, you made it out somehow!"
+      
+
+     elsif choice2 == "left"
+        puts " Oh no you've run into a wailing banshee, she puts you to eternal sleep"
+      
+
+     else
+       puts "You choose wrong, you fell into a bottomless pit and died  :o "
+     end
+
+  elsif choice == "right"
+   
+    puts " You've run into a gigantic orc, he pulls out a club and bludgeons you to death. Too bad! "
+  
+  else 
+    puts " You didn't choose left or right and you waited. The Dragon woke up and burnt you to cinders!"
+  end
+end
+
+
+
+def dragon
+  puts "The dragon stirs. You have a flute"
+  puts "Do you play it or try moving forward?" 
+  print ">"
+ 
+  choice = $stdin.gets.chomp
+  
+  if choice == "play it"
+    puts "TUUUTUUUU"   
+    puts "The dragon comfily tucks into his bed of gold"
+    puts "You approach close enough to the gold to take some"
+    puts "There is a large chest and a small chest, which one do you carry?"
+    print ">>"
+   $var1 = $stdin.gets.chomp
+    escape
+
+  elsif choice == "move forward"
+    puts "You sure about that?  
+    puts "Y/N?"
+    print ">"
+   choice2 = $stdin.gets.chomp
+
+    if choice2 == "Y"
+      puts "Wrong choice, you're dead my man :)"
+    else
+      dragon
+    end
+  end
+end
+
+def escape
+  puts "Time for your grand escape"
+  if $var1 == "large"
+    puts "You chose the large chest......so you've chosen death!"
+    puts "Just kidding, but you'll have to run fairly faster"
+    puts "Type in the letter X 3 times to speed up your run, there are monsters behind you"
+    print ">"
+    var2 = $stdin.gets.chomp
+    var3 = $stdin.gets.chomp
+    var3 = $stdin.gets.chomp
+    
+    if var1==var2==var3=="x"
+      puts "Alrighty, you're on your way!"
+      puts "Press o to open the chest!"
+      var4 = $stdin.gets.chomp
+      if 
+    else 
+      puts "Bro i said type in  X!"
+      puts "You failed! and were gobbled up by monsters!"
+    end
+  elif $var2 == "small"       
+
+def start
+  puts "You are in a castle"
+  puts "There is a dragon sleeping on a pile of gold"
+  puts "There is a gleaming diamond sword wedged on a rock"
+  puts "Do you 1)Run 2)Approach the gold sneakily 3)Get the sword   "
+  print ">"
+  choice = $stdin.gets.chomp
+ 
+  if choice == "run"
+    goblin 
+
+  elsif choice == "approach"
+    dragon
+  
+  
+  elsif choice == "get the sword"
+    fight
+  
+  else
+    puts "YOU HAVE 3 CHOICES My FREN"
+  end
+end
+
+start
+
+  
+ 
+ 
+  
