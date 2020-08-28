@@ -1,0 +1,99 @@
+$level = 1
+$result = 0
+
+class scene
+  def start()
+    puts "NIl"
+  end
+end
+
+
+class castle < scene
+  puts "You are in a dark, grimy castle"
+  puts "Torches illuminate the dark hallways"
+  puts "A gigantic firebreathing dragon lies in deep slumber atop a gleaming pile of gold and other magnificient treasures"
+  puts "You're hard pressed for some cash. The gold looks enticing, wyd?"
+  puts "1. Walk straight towards the monstrous thing  2.Run while you still can >.<   3.Try out a stealthy approach"
+
+  var1 = $std.gets.in.chomp
+ 
+  if var1 == "walk"
+    puts "You unsheathe your sword made out of mithril, should be able to cut through people like butter."
+    puts " The dragon stirs. Uh-oh Still think this is a good idea? :/ "
+
+    var2 = $stdin.gets.in.chomp
+    if  var2 == "Yes"
+      puts "You bravely move towards the dragon"
+      puts "Suddenly it opens it's eyes and is rudely woken out of it's deep sleep"
+      puts "He doesn't look happy."
+      puts "ROARRRRRRRR"
+      puts "The dragon lets out an enormous flame and burns you to toast."
+      puts "Tough luck."
+      return "death"
+   
+    else
+      puts "You Run down the first way you see."
+      puts "A gigantic bloodthirsty bat appears out of literally nowhere"
+      puts "Do you want to try to fight?"
+      return "fightbat"
+      if ($result == 0)
+        return "death"
+      
+      else
+        return "forest"
+      end
+    end
+
+  elsif var1 == "Run"
+     
+
+
+class forest < scene
+  puts "You've somehow escaped the castle, now you are in a deep, dark forest"
+
+
+ 
+   
+class fight
+  def initialize(name)
+    @name = name
+  end
+
+  puts "You face a wild monster, a #{@name}!!"
+
+  if ($level == 1)
+  playerap == 2
+ 
+  elsif ($level == 2)
+  playerap == 3
+ 
+  else 
+  playerap == 4 
+  end    
+  
+  monsterap = rand (1..7)
+  monsterhp = rand (5..20)
+  playerhp = 10
+  puts "It has a total hp of #{hp}!"
+  puts "Your sword is at level #{$level}, gulp!"
+  puts "Time to brave up, it's fight night."
+  
+  while (playerhp != 0)
+    puts "Time for an attack, press x to unleash the fury of your sword!"
+    var3 = $std.gets.in.chomp  
+    
+    if (var3 == "x")
+     puts "HYAAA! you gave the monster a good whack with your epic sword!"
+     monsterhp = monsterhp-playerap
+     print "Monster hp is now #{hp}"
+     puts "Time for the counterattack! The monster gets ready...and PLOW!, deals damage!"
+     playerhp = playerhp - monsterap
+     print "Your hp is now #{playerhp}"  
+   
+   else
+     print "You pressed the wrong button!"
+     print "The monster takes this chance and deals damage!"
+     playerhp = playerhp - monsterap
+     print "Your hp is now #{playerhp}"
+    end
+end
